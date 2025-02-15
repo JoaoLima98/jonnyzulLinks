@@ -38,8 +38,8 @@ body {
     height: 20vw;
     max-width: 250px;
     max-height: 250px;
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 200px;
+    min-height: 200px;
     border-radius: 50%;
     border: 3px solid #ccc;
     background-color: white;
