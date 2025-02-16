@@ -33,6 +33,13 @@ body {
     z-index: 0;
 }
 
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .profile-pic {
     width: 20vw;
     height: 20vw;
@@ -41,15 +48,9 @@ body {
     min-width: 200px;
     min-height: 200px;
     border-radius: 50%;
-    border: 3px solid #ccc;
-    background-color: white;
     overflow: hidden;
     position: relative;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    margin-bottom: 20px;
+    background-color: white;
 }
 
 .profile-pic img {
@@ -57,7 +58,29 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    transition: filter 0.3s ease-in-out;
 }
+
+/* Ícone do Instagram */
+.instagram-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.profile-pic:hover img {
+    filter: brightness(0.4); /* Escurece a imagem ao passar o mouse */
+}
+
+.profile-pic:hover .instagram-icon {
+    opacity: 1; /* Aparece o ícone */
+}
+
 
 .content {
     position: relative;
